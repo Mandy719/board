@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## 欢迎来到留言版
 
-You can use the [editor on GitHub](https://github.com/Mandy719/board/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+你可以在这里添加你的留言。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'f09cf52948d43f4adac1',
+    clientSecret: 'bc6ca7b09a9f79e97efb995b32265539fa826b0d',
+    repo: 'board',
+    owner: 'mandy719',
+    admin: ['mandy719'],
+    id: location.pathname,
+    distractionFreeMode: false
+  })
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mandy719/board/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  gitalk.render('gitalk-container')
+</script>
